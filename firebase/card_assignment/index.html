@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class task</title>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <select id="sortBy" onchange="sortUsers()">
+        <option disabled>Select to sort</option>
+        <option value="level">Level</option>
+        <option value="name">Name</option>
+        <option value="points">Points</option>
+    </select>
+    <!-- container for all cards -->
+    <section class="container" id="card-container">
+        <!-- build card container here -->
+        
+        
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
