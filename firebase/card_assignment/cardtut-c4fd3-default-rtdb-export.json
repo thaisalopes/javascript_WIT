@@ -1,0 +1,38 @@
+{
+  "students": {
+    "c3h0495f-ae1a-4b61-a07b-4d8ed0c90341": {
+      "cardColor": "#f93e3e",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.",
+      "id": "c3h0495f-ae1a-4b61-a07b-4d8ed0c90341",
+      "imageURL": "https://icon-library.com/images/icon-avatar/icon-avatar-6.jpg",
+      "level": 11,
+      "name": "Jane Doe",
+      "points": 10154
+    },
+    "e8a5884c-ae1a-4b61-a07b-4d8ed0c10796": {
+      "cardColor": "#7081ff",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.",
+      "id": "e8a5884c-ae1a-4b61-a07b-4d8ed0c10796",
+      "imageURL": "https://cdn-icons-png.flaticon.com/512/147/147144.png",
+      "level": 13,
+      "name": "Jim Smith",
+      "points": "13154"
+    },
+    "f3j9384f-ae1a-4b61-a07b-4d8ed0h58934": {
+      "cardColor": "#98fb98",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.",
+      "imageURL": "https://www.shareicon.net/data/512x512/2016/05/24/770137_man_512x512.png",
+      "level": 22,
+      "name": "Mark Anthony",
+      "points": 29378
+    },
+    "user1": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.",
+      "id": "user1",
+      "imageURL": "https://icon-library.com/images/icon-avatar/icon-avatar-6.jpg",
+      "level": "20",
+      "name": "Liz Woods",
+      "points": "28194"
+    }
+  }
+}
