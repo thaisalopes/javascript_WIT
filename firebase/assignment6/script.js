@@ -81,54 +81,31 @@ function daysUntilBirthday(dob) {
 }
 
 async function getRandomQuote() {
-  try {
-    const response = await fetch("https://type.fit/api/quotes");
+  const response = await fetch("https://api.allorigins.win/raw?url=https://type.fit/api/quotes");
 
-    if (response.ok === false) {
-      throw new Error("API failed");
-    }
-
-    const quotes = await response.json();
-
-    const index = Math.floor(Math.random() * quotes.length);
-    const selectedQuote = quotes[index];
-
-    let text = "";
-    let author = "";
-
-    if (selectedQuote && selectedQuote.text) {
-      text = selectedQuote.text;
-    }
-
-    if (selectedQuote && selectedQuote.author) {
-      author = selectedQuote.author;
-    } else {
-      author = "Unknown";
-    }
-
-    return { text: text, author: author };
-  } catch (e) {
-    const response2 = await fetch("./quotes.json");
-    const quotes2 = await response2.json();
-
-    const index2 = Math.floor(Math.random() * quotes2.length);
-    const selectedQuote2 = quotes2[index2];
-
-    let text2 = "";
-    let author2 = "";
-
-    if (selectedQuote2 && selectedQuote2.text) {
-      text2 = selectedQuote2.text;
-    }
-
-    if (selectedQuote2 && selectedQuote2.author) {
-      author2 = selectedQuote2.author;
-    } else {
-      author2 = "Unknown";
-    }
-
-    return { text: text2, author: author2 };
+  if (!response.ok) {
+    throw new Error("API failed");
   }
+
+  const quotes = await response.json();
+
+  const index = Math.floor(Math.random() * quotes.length);
+  const selectedQuote = quotes[index];
+
+  let text = "";
+  let author = "";
+
+  if (selectedQuote && selectedQuote.text) {
+    text = selectedQuote.text;
+  }
+
+  if (selectedQuote && selectedQuote.author) {
+    author = selectedQuote.author;
+  } else {
+    author = "Unknown";
+  }
+
+  return { text: text, author: author };
 }
 
 authSections.style.display = "grid";

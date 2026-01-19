@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthday Countdown</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -45,7 +48,7 @@
                   <input type="password" id="regPassword" required />
                 </div>
 
-                <button type="submit" class="btn btnPrimary">Register</button>
+                <button type="submit" class="btn">Register</button>
               </form>
             </div>
           </section>
@@ -64,19 +67,20 @@
                   <input type="password" id="loginPassword" required />
                 </div>
 
-                <button type="submit" class="btn btnSecondary">Log In</button>
+                <button type="submit" class="btn">Log In</button>
               </form>
             </div>
           </section>
         </div>
 
         <section id="resultSection" class="card" style="display:none;">
-          <div class="cardHeader resultHeader"></div>
-          <div class="cardBody center">
+          <div class="cardHeader"></div>
+          <div class="cardBody">
             <div id="resultContainer"></div>
             <button id="resultLogoutBtn" class="btn btnLogout">Log out</button>
           </div>
         </section>
+
 
       </div>
     </div>
