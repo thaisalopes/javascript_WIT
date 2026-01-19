@@ -1,59 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Birthday CountDown</title>
-        
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Countdown</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-        <h2>Registration</h2>
-        <form id = "registrationForm">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" required> 
-            </div>
-            <div>
-                <label for="regEmail">Email:</label>
-                <input type="email" id="regEmail" required> 
-            </div>
-            <div>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone"> 
-            </div>
-            <div>
-                <label for="date">Date of Birth:</label>
-                <input type ="date" id="dob" required>
-            </div>
-            <div>
-                <label for="regPassword">Password:</label>
-                <input type="password" id="regPassword" required>
-            </div>
-            <button type="submit" id="regSubmit">Register</button>
-        </form>
+  <body>
+    <div class="wrap">
+      <div class="app">
 
-        <h2>Log In</h2>
-        <form id = "loginForm">
-            <div>
-                <label for="loginEmail">Email:</label>
-                <input type="email" id="loginEmail" required> 
+        <header class="header">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/036/053/451/large_2x/ai-generated-cartoon-birthday-cake-transparent-background-free-png.png"
+            alt="Birthday cake"
+            class="cake"
+          />
+          <h1>Birthday Countdown</h1>
+        </header>
+
+        <div class="grid" id="authSections">
+          <section class="card">
+            <div class="cardHeader">Create account</div>
+            <div class="cardBody">
+              <form id="registrationForm">
+                <div class="field">
+                  <label>Name</label>
+                  <input type="text" id="name" required />
+                </div>
+
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" id="regEmail" required />
+                </div>
+
+                <div class="field">
+                  <label>Date of birth</label>
+                  <input type="date" id="dob" required />
+                </div>
+
+                <div class="field">
+                  <label>Password</label>
+                  <input type="password" id="regPassword" required />
+                </div>
+
+                <button type="submit" class="btn btnPrimary">Register</button>
+              </form>
             </div>
-            <div>
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" required>
+          </section>
+
+          <section class="card">
+            <div class="cardHeader">Log in</div>
+            <div class="cardBody">
+              <form id="loginForm">
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" id="loginEmail" required />
+                </div>
+
+                <div class="field">
+                  <label>Password</label>
+                  <input type="password" id="loginPassword" required />
+                </div>
+
+                <button type="submit" class="btn btnSecondary">Log In</button>
+              </form>
             </div>
-            <button type="submit" id="loginSubmit">Log In</button>
-        </form>
+          </section>
+        </div>
 
-        <section id="container" style="display:none;">
-
-
+        <section id="resultSection" class="card" style="display:none;">
+          <div class="cardHeader resultHeader"></div>
+          <div class="cardBody center">
+            <div id="resultContainer"></div>
+            <button id="resultLogoutBtn" class="btn btnLogout">Log out</button>
+          </div>
         </section>
 
-        <button id="logoutBtn" type="button" style="display:none;">Log out</button>
+      </div>
+    </div>
 
-        <script src="./script.js" type="module"></script>
-
-    </body>
-
+    <script src="./script.js" type="module"></script>
+  </body>
 </html>
