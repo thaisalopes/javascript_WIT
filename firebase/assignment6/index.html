@@ -1,33 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Birthday Countdown</title>
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body>
-        <form id="registrationForm">
-            <div id="registerForm_name">
-                <label for="name">Name:</label>
-                <input type="text" id="name">
-            </div><br>
-            <div id="registerForm_dob">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob">
-            </div><br>
-            <div id="registerForm_email">
-                <label for="email">E-mail</label>
-                <input type="email" id="email">
-            </div><br>
-                <div id="registerForm_password">
-                <label for="password">Password</label>
-                <input type="password" id="password">
-            </div><br>
-            <button type="submit" id="registerBtn">Click to Sign Up</button>
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Countdown</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
+  </head>
 
-        <script src="script.js"></script>
-    </body>
+  <body>
+    <div class="wrap">
+      <div class="app">
 
+        <header class="header">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/036/053/451/large_2x/ai-generated-cartoon-birthday-cake-transparent-background-free-png.png"
+            alt="Birthday cake"
+            class="cake"
+          />
+          <h1>Birthday Countdown</h1>
+        </header>
+
+        <div class="grid" id="authSections">
+          <section class="card">
+            <div class="cardHeader">Create account</div>
+            <div class="cardBody">
+              <form id="registrationForm">
+                <div class="field">
+                  <label>Name</label>
+                  <input type="text" id="name" required />
+                </div>
+
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" id="regEmail" required />
+                </div>
+
+                <div class="field">
+                  <label>Date of birth</label>
+                  <input type="date" id="dob" required />
+                </div>
+
+                <div class="field">
+                  <label>Password</label>
+                  <input type="password" id="regPassword" required />
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+              </form>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="cardHeader">Log in</div>
+            <div class="cardBody">
+              <form id="loginForm">
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" id="loginEmail" required />
+                </div>
+
+                <div class="field">
+                  <label>Password</label>
+                  <input type="password" id="loginPassword" required />
+                </div>
+
+                <button type="submit" class="btn">Log In</button>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <section id="resultSection" class="card" style="display:none;">
+          <div class="cardHeader"></div>
+          <div class="cardBody">
+            <div id="resultContainer"></div>
+            <button id="resultLogoutBtn" class="btn btnLogout">Log out</button>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+  </body>
 </html>
