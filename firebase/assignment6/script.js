@@ -193,8 +193,11 @@ loginForm.addEventListener("submit", async (e) => {
     if (days === 0) {
       const quote = await getRandomQuote();
       showMessage("Happy Birthday, " + name + "!", "Here’s a quote for you:", quote.text, quote.author);
-    } else {
-      showMessage(days + "days left", "until your birthday!");
+    } else if (days === 1) {
+      showMessage(days + " day left", "until your birthday!");
+    }
+    else {
+      showMessage(days + " days left", "until your birthday!");
     }
   } catch (e) {
     alert(e.message);
